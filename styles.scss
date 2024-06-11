@@ -96,12 +96,13 @@ body {
 .socials {
     display: flex;
     flex-direction: column;
-    gap: 1.4em;
-    div {
+    gap: 1.5em;
+    list-style-type: none;
+    li {
         @extend %socials-text;
         background-color: $grey;
         border-radius: 0.6em;
-        padding: 1.1em;
+        padding: 1em;
         width: 18em;
 
         &:hover {
@@ -128,7 +129,7 @@ body {
     }
 
     .socials {
-        div {
+        li {
             width: 20em;
         }
     }

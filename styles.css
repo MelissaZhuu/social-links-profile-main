@@ -1,4 +1,4 @@
-.socials div {
+.socials li {
   font-size: 1.4em;
   color: hsl(0, 0%, 100%);
   font-weight: 600;
@@ -65,15 +65,16 @@ body {
 .socials {
   display: flex;
   flex-direction: column;
-  gap: 1.4em;
+  gap: 1.5em;
+  list-style-type: none;
 }
-.socials div {
+.socials li {
   background-color: hsl(0, 0%, 20%);
   border-radius: 0.6em;
-  padding: 1.1em;
+  padding: 1em;
   width: 18em;
 }
-.socials div:hover {
+.socials li:hover {
   background-color: hsl(75, 94%, 57%);
   color: hsl(0, 0%, 8%);
   cursor: pointer;
@@ -93,7 +94,7 @@ body {
   .card {
     padding: 4em;
   }
-  .socials div {
+  .socials li {
     width: 20em;
   }
 }/*# sourceMappingURL=styles.css.map */
