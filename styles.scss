@@ -1,0 +1,135 @@
+// Variables
+
+// Font size
+$body-txt-size: 1.4em;
+
+// Font weights
+$reg-body: 300;
+$bold-body: 600;
+$bold-heading: 500;
+
+// Layout widths
+$mobile-w: 375px;
+$desktop-w: 1440px;
+
+// Colors
+$primary: hsl(75, 94%, 57%);
+$white: hsl(0, 0%, 100%);
+$grey: hsl(0, 0%, 20%);
+$dark-grey: hsl(0, 0%, 12%);
+$black: hsl(0, 0%, 8%);
+
+
+// Inheritance
+
+%socials-text {
+    font-size: $body-txt-size;
+    color: $white;
+    font-weight: $bold-body;
+}
+
+%flexbox-layout {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+// Styling
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: inter;
+    src: url("assets/fonts/Inter-VariableFont_slnt\,wght.ttf")
+}
+
+body {
+    font-family: inter;
+    background-color: $black;
+    height: 100vh;
+    @extend %flexbox-layout;
+    font-size: 62.5%;
+    min-width: $mobile-w;
+}
+
+.card {
+    background-color: $dark-grey;
+    width:auto;
+    height:auto;
+    border-radius: 1em;
+    padding: 2.5em;
+    @extend %flexbox-layout;
+    text-align: center;
+    gap: 2.4em;
+}
+
+.profile-pic{
+    width: 9em;
+    height: 9em;
+    border-radius: 5em;
+}
+
+.profile-text {
+    color: $white;
+    font-size: $body-txt-size;
+    @extend %flexbox-layout;
+    .name {
+        font-size: x-large;
+        font-weight: $bold-heading;
+        padding-bottom: 0.4em;
+    }
+    .location {
+        color: $primary;
+        font-weight: $bold-body;
+        padding-bottom: 2em;
+    }
+    .bio {
+        font-weight: $reg-body;
+    }
+}
+
+.socials {
+    display: flex;
+    flex-direction: column;
+    gap: 1.4em;
+    div {
+        @extend %socials-text;
+        background-color: $grey;
+        border-radius: 0.6em;
+        padding: 1.1em;
+        width: 18em;
+
+        &:hover {
+        background-color: $primary;
+        color: $black;
+        cursor: pointer;
+        }
+    }
+}
+
+.attribution { 
+    padding: 2.4em;
+    color: hsl(0, 0%, 35%);
+    font-size: 1.1em; 
+    text-align: center; 
+    a {
+        color: hsl(75, 35%, 40%);
+    }
+}
+
+@media screen and (min-width: 450px){
+    .card {
+        padding: 4em;
+    }
+
+    .socials {
+        div {
+            width: 20em;
+        }
+    }
+}
